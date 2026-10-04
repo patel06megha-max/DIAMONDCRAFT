@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>New User - Diamond Craft</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+<button class="back-btn" onclick="goBack()">← Back</button>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="Diamond craft.png" alt="Diamond Draft Logo">
+            Diamond Craft
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="diamonds.html">
+                    Diamonds
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About Us
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="form-section">
+
+    <div class="form-box">
+
+        <h2>
+            New User Registration
+        </h2>
+
+
+        <form action="register.php"
+              method="POST">
+
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Contact Number"
+                required>
+
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+
+
+            <input
+                type="password"
+                name="confirm_password"
+                placeholder="Confirm Password"
+                required>
+
+
+            <input
+                type="text"
+                name="address"
+                placeholder="Address"
+                required>
+
+
+            <button type="submit">
+                Register
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h2>
+         Diamond Craft
+    </h2>
+
+    <p>
+        Explore. Compare. Discover.
+    </p>
+
+    <p>
+        © 2026 Diamond Craft
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

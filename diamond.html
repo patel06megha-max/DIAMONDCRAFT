@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diamonds - Diamond Draft</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<button class="back-btn" onclick="goBack()">← Back</button>
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="Diamond craft.png" alt="Diamond Draft Logo">
+            Diamond Craft
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="diamond.html">Diamonds</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+            <li class="login-dropdown">
+
+                <button onclick="toggleLogin()">
+                    Login 
+                </button>
+
+                <div class="dropdown-menu" id="loginMenu">
+
+                    <a href="admin-login.html">
+                        Admin Login
+                    </a>
+
+                    <a href="new-user.html">
+                        New User
+                    </a>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= PAGE HEADING ================= -->
+
+<section class="diamond-page-heading">
+
+    <h1>
+        Discover Our Diamonds
+    </h1>
+
+    <p>
+        Select your preferred diamond characteristics and find your perfect match.
+    </p>
+
+</section>
+
+
+<!-- ================= FILTER SECTION ================= -->
+
+<section class="filter-section">
+
+    <h2>
+        Find Your Diamond
+    </h2>
+
+    <div class="filters">
+
+
+        <!-- CLARITY -->
+
+        <div class="filter-box">
+
+            <label for="clarity">
+                Clarity
+            </label>
+
+            <select id="clarity">
+
+                <option value="all">
+                    All Clarity
+                </option>
+
+                <option value="FL">
+                    FL - Flawless
+                </option>
+
+                <option value="IF">
+                    IF - Internally Flawless
+                </option>
+
+                <option value="VVS1">
+                    VVS1
+                </option>
+
+                <option value="VVS2">
+                    VVS2
+                </option>
+
+                <option value="VS1">
+                    VS1
+                </option>
+
+                <option value="VS2">
+                    VS2
+                </option>
+
+                <option value="SI1">
+                    SI1
+                </option>
+
+                <option value="SI2">
+                    SI2
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- COLOR -->
+
+        <div class="filter-box">
+
+            <label for="color">
+                Color
+            </label>
+
+            <select id="color">
+
+                <option value="all">
+                    All Colors
+                </option>
+
+                <option value="D">
+                    D
+                </option>
+
+                <option value="E">
+                    E
+                </option>
+
+                <option value="F">
+                    F
+                </option>
+
+                <option value="G">
+                    G
+                </option>
+
+                <option value="H">
+                    H
+                </option>
+
+                <option value="I">
+                    I
+                </option>
+
+                <option value="J">
+                    J
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- CUT -->
+
+        <div class="filter-box">
+
+            <label for="cut">
+                Cut
+            </label>
+
+            <select id="cut">
+
+                <option value="all">
+                    All Cuts
+                </option>
+
+                <option value="Excellent">
+                    Excellent
+                </option>
+
+                <option value="Very Good">
+                    Very Good
+                </option>
+
+                <option value="Good">
+                    Good
+                </option>
+
+                <option value="Fair">
+                    Fair
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- SHAPE -->
+
+        <div class="filter-box">
+
+            <label for="shape">
+                Shape
+            </label>
+
+            <select id="shape">
+
+                <option value="all">
+                    All Shapes
+                </option>
+
+                <option value="Round">
+                    Round
+                </option>
+
+                <option value="Princess">
+                    Princess
+                </option>
+
+                <option value="Oval">
+                    Oval
+                </option>
+
+                <option value="Emerald">
+                    Emerald
+                </option>
+
+                <option value="Pear">
+                    Pear
+                </option>
+
+                <option value="Marquise">
+                    Marquise
+                </option>
+
+                <option value="Cushion">
+                    Cushion
+                </option>
+
+                <option value="Radiant">
+                    Radiant
+                </option>
+
+                <option value="Heart">
+                    Heart
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- CARAT -->
+
+        <div class="filter-box">
+
+            <label for="carat">
+                Carat
+            </label>
+
+            <select id="carat">
+
+                <option value="all">
+                    All Carats
+                </option>
+
+                <option value="0.50">
+                    0.50 Carat
+                </option>
+
+                <option value="0.75">
+                    0.75 Carat
+                </option>
+
+                <option value="1.00">
+                    1.00 Carat
+                </option>
+
+                <option value="1.25">
+                    1.25 Carat
+                </option>
+
+                <option value="1.50">
+                    1.50 Carat
+                </option>
+
+                <option value="2.00">
+                    2.00 Carat
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- POLISH -->
+
+        <div class="filter-box">
+
+            <label for="polish">
+                Polish
+            </label>
+
+            <select id="polish">
+
+                <option value="all">
+                    All Polish
+                </option>
+
+                <option value="Excellent">
+                    Excellent
+                </option>
+
+                <option value="Very Good">
+                    Very Good
+                </option>
+
+                <option value="Good">
+                    Good
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- SYMMETRY -->
+
+        <div class="filter-box">
+
+            <label for="symmetry">
+                Symmetry
+            </label>
+
+            <select id="symmetry">
+
+                <option value="all">
+                    All Symmetry
+                </option>
+
+                <option value="Excellent">
+                    Excellent
+                </option>
+
+                <option value="Very Good">
+                    Very Good
+                </option>
+
+                <option value="Good">
+                    Good
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- FLUORESCENCE -->
+
+        <div class="filter-box">
+
+            <label for="fluorescence">
+                Fluorescence
+            </label>
+
+            <select id="fluorescence">
+
+                <option value="all">
+                    All Fluorescence
+                </option>
+
+                <option value="None">
+                    None
+                </option>
+
+                <option value="Faint">
+                    Faint
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="Strong">
+                    Strong
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- CERTIFICATE -->
+
+        <div class="filter-box">
+
+            <label for="certificate">
+                Certificate
+            </label>
+
+            <select id="certificate">
+
+                <option value="all">
+                    All Certificates
+                </option>
+
+                <option value="GIA">
+                    GIA
+                </option>
+
+                <option value="IGI">
+                    IGI
+                </option>
+
+                <option value="HRD">
+                    HRD
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PRICE -->
+
+        <div class="filter-box">
+
+            <label for="price">
+                Price
+            </label>
+
+            <select id="price">
+
+                <option value="all">
+                    All Prices
+                </option>
+
+                <option value="50000">
+                    Below ₹50,000
+                </option>
+
+                <option value="75000">
+                    Below ₹75,000
+                </option>
+
+                <option value="100000">
+                    Below ₹1,00,000
+                </option>
+
+                <option value="150000">
+                    Below ₹1,50,000
+                </option>
+
+                <option value="200000">
+                    Below ₹2,00,000
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="search-button"
+        onclick="filterDiamonds()">
+
+        Search Diamonds
+
+    </button>
+
+</section>
+
+
+<!-- ================= RESULTS ================= -->
+
+<section class="results-section">
+
+    <h2>
+        Available Diamonds
+    </h2>
+
+
+    <div class="diamond-grid">
+
+
+        <!-- DIAMOND 1 -->
+
+        <div
+            class="diamond-card"
+
+            data-clarity="VVS1"
+            data-color="D"
+            data-cut="Excellent"
+            data-shape="Round"
+            data-carat="1.00"
+            data-polish="Excellent"
+            data-symmetry="Excellent"
+            data-fluorescence="None"
+            data-certificate="GIA"
+            data-price="85000"
+        >
+
+            <img
+                src="WhatsApp Image 2026-09-27 at 7.27.51 PM (2).jpeg"
+                alt="Diamond">
+
+            <div class="diamond-details">
+
+                <h3>
+                    Premium Round Diamond
+                </h3>
+
+                <p>
+                    <strong>Clarity:</strong> VVS1
+                </p>
+
+                <p>
+                    <strong>Color:</strong> D
+                </p>
+
+                <p>
+                    <strong>Cut:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Shape:</strong> Round
+                </p>
+
+                <p>
+                    <strong>Carat:</strong> 1.00
+                </p>
+
+                <p>
+                    <strong>Polish:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Symmetry:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Fluorescence:</strong> None
+                </p>
+
+                <p>
+                    <strong>Certificate:</strong> GIA
+                </p>
+
+
+                <div class="price">
+                    ₹85,000
+                </div>
+
+
+                <details>
+
+                    <summary>
+                        Vendor Details ▼
+                    </summary>
+
+                    <div class="vendor-details">
+
+                        <p>
+                            <strong>Name:</strong>
+                            Ruby Diamond House
+                        </p>
+
+                        <p>
+                            <strong>Contact:</strong>
+                            9876543210
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIAMOND 2 -->
+
+        <div
+            class="diamond-card"
+
+            data-clarity="VS1"
+            data-color="E"
+            data-cut="Very Good"
+            data-shape="Oval"
+            data-carat="0.75"
+            data-polish="Very Good"
+            data-symmetry="Very Good"
+            data-fluorescence="Faint"
+            data-certificate="IGI"
+            data-price="72000"
+        >
+
+            <img
+                src="WhatsApp Image 2026-09-27 at 8.18.45 PM.jpeg"
+                alt="Diamond">
+
+            <div class="diamond-details">
+
+                <h3>
+                    Elegant Oval Diamond
+                </h3>
+
+                <p>
+                    <strong>Clarity:</strong> VS1
+                </p>
+
+                <p>
+                    <strong>Color:</strong> E
+                </p>
+
+                <p>
+                    <strong>Cut:</strong> Very Good
+                </p>
+
+                <p>
+                    <strong>Shape:</strong> Oval
+                </p>
+
+                <p>
+                    <strong>Carat:</strong> 0.75
+                </p>
+
+                <p>
+                    <strong>Polish:</strong> Very Good
+                </p>
+
+                <p>
+                    <strong>Symmetry:</strong> Very Good
+                </p>
+
+                <p>
+                    <strong>Fluorescence:</strong> Faint
+                </p>
+
+                <p>
+                    <strong>Certificate:</strong> IGI
+                </p>
+
+
+                <div class="price">
+                    ₹72,000
+                </div>
+
+
+                <details>
+
+                    <summary>
+                        Vendor Details ▼
+                    </summary>
+
+                    <div class="vendor-details">
+
+                        <p>
+                            <strong>Name:</strong>
+                            Royal Gems
+                        </p>
+
+                        <p>
+                            <strong>Contact:</strong>
+                            9825012345
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIAMOND 3 -->
+
+        <div
+            class="diamond-card"
+
+            data-clarity="VVS2"
+            data-color="F"
+            data-cut="Excellent"
+            data-shape="Princess"
+            data-carat="1.25"
+            data-polish="Excellent"
+            data-symmetry="Excellent"
+            data-fluorescence="None"
+            data-certificate="GIA"
+            data-price="91000"
+        >
+
+            <img
+                src="WhatsApp Image 2026-09-27 at 8.20.35 PM.jpeg"
+                alt="Diamond">
+
+            <div class="diamond-details">
+
+                <h3>
+                    Princess Cut Diamond
+                </h3>
+
+                <p>
+                    <strong>Clarity:</strong> VVS2
+                </p>
+
+                <p>
+                    <strong>Color:</strong> F
+                </p>
+
+                <p>
+                    <strong>Cut:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Shape:</strong> Princess
+                </p>
+
+                <p>
+                    <strong>Carat:</strong> 1.25
+                </p>
+
+                <p>
+                    <strong>Polish:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Symmetry:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Fluorescence:</strong> None
+                </p>
+
+                <p>
+                    <strong>Certificate:</strong> GIA
+                </p>
+
+
+                <div class="price">
+                    ₹91,000
+                </div>
+
+
+                <details>
+
+                    <summary>
+                        Vendor Details ▼
+                    </summary>
+
+                    <div class="vendor-details">
+
+                        <p>
+                            <strong>Name:</strong>
+                            Diamond World
+                        </p>
+
+                        <p>
+                            <strong>Contact:</strong>
+                            9898989898
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIAMOND 4 -->
+
+        <div
+            class="diamond-card"
+
+            data-clarity="IF"
+            data-color="G"
+            data-cut="Excellent"
+            data-shape="Emerald"
+            data-carat="1.50"
+            data-polish="Excellent"
+            data-symmetry="Very Good"
+            data-fluorescence="None"
+            data-certificate="IGI"
+            data-price="120000"
+        >
+
+            <img
+                src="WhatsApp Image 2026-09-27 at 8.24.58 PM.jpeg"
+                alt="Diamond">
+
+            <div class="diamond-details">
+
+                <h3>
+                    Emerald Cut Diamond
+                </h3>
+
+                <p>
+                    <strong>Clarity:</strong> IF
+                </p>
+
+                <p>
+                    <strong>Color:</strong> G
+                </p>
+
+                <p>
+                    <strong>Cut:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Shape:</strong> Emerald
+                </p>
+
+                <p>
+                    <strong>Carat:</strong> 1.50
+                </p>
+
+                <p>
+                    <strong>Polish:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Symmetry:</strong> Very Good
+                </p>
+
+                <p>
+                    <strong>Fluorescence:</strong> None
+                </p>
+
+                <p>
+                    <strong>Certificate:</strong> IGI
+                </p>
+
+
+                <div class="price">
+                    ₹1,20,000
+                </div>
+
+
+                <details>
+
+                    <summary>
+                        Vendor Details ▼
+                    </summary>
+
+                    <div class="vendor-details">
+
+                        <p>
+                            <strong>Name:</strong>
+                            Surat Diamond Hub
+                        </p>
+
+                        <p>
+                            <strong>Contact:</strong>
+                            9876501234
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIAMOND 5 -->
+
+        <div
+            class="diamond-card"
+
+            data-clarity="VS2"
+            data-color="H"
+            data-cut="Very Good"
+            data-shape="Pear"
+            data-carat="1.00"
+            data-polish="Very Good"
+            data-symmetry="Very Good"
+            data-fluorescence="Medium"
+            data-certificate="HRD"
+            data-price="98000"
+        >
+
+            <img
+                src="WhatsApp Image 2026-09-27 at 8.34.02 PM.jpeg"
+                alt="Diamond">
+
+            <div class="diamond-details">
+
+                <h3>
+                    Pear Shape Diamond
+                </h3>
+
+                <p>
+                    <strong>Clarity:</strong> VS2
+                </p>
+
+                <p>
+                    <strong>Color:</strong> H
+                </p>
+
+                <p>
+                    <strong>Cut:</strong> Very Good
+                </p>
+
+                <p>
+                    <strong>Shape:</strong> Pear
+                </p>
+
+                <p>
+                    <strong>Carat:</strong> 1.00
+                </p>
+
+                <p>
+                    <strong>Polish:</strong> Very Good
+                </p>
+
+                <p>
+                    <strong>Symmetry:</strong> Very Good
+                </p>
+
+                <p>
+                    <strong>Fluorescence:</strong> Medium
+                </p>
+
+                <p>
+                    <strong>Certificate:</strong> HRD
+                </p>
+
+
+                <div class="price">
+                    ₹98,000
+                </div>
+
+
+                <details>
+
+                    <summary>
+                        Vendor Details ▼
+                    </summary>
+
+                    <div class="vendor-details">
+
+                        <p>
+                            <strong>Name:</strong>
+                            Surat Gems
+                        </p>
+
+                        <p>
+                            <strong>Contact:</strong>
+                            9812345678
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIAMOND 6 -->
+
+        <div
+            class="diamond-card"
+
+            data-clarity="VVS2"
+            data-color="F"
+            data-cut="Excellent"
+            data-shape="Cushion"
+            data-carat="2.00"
+            data-polish="Excellent"
+            data-symmetry="Excellent"
+            data-fluorescence="None"
+            data-certificate="GIA"
+            data-price="175000"
+        >
+
+            <img
+                src="WhatsApp Image 2026-09-27 at 8.34.11 PM.jpeg"
+                alt="Diamond">
+
+            <div class="diamond-details">
+
+                <h3>
+                    Cushion Cut Diamond
+                </h3>
+
+                <p>
+                    <strong>Clarity:</strong> VVS2
+                </p>
+
+                <p>
+                    <strong>Color:</strong> F
+                </p>
+
+                <p>
+                    <strong>Cut:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Shape:</strong> Cushion
+                </p>
+
+                <p>
+                    <strong>Carat:</strong> 2.00
+                </p>
+
+                <p>
+                    <strong>Polish:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Symmetry:</strong> Excellent
+                </p>
+
+                <p>
+                    <strong>Fluorescence:</strong> None
+                </p>
+
+                <p>
+                    <strong>Certificate:</strong> GIA
+                </p>
+
+
+                <div class="price">
+                    ₹1,75,000
+                </div>
+                
+
+
+                <details>
+
+                    <summary>
+                        Vendor Details ▼
+                    </summary>
+
+                    <div class="vendor-details">
+
+                        <p>
+                            <strong>Name:</strong>
+                            Royal Diamond Traders
+                        </p>
+
+                        <p>
+                            <strong>Contact:</strong>
+                            9867894561
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        
+
+    </div>
+    <div
+    class="diamond-card"
+
+    data-clarity="VVS1"
+    data-color="G"
+    data-cut="Excellent"
+    data-shape="Marquise"
+    data-carat="1.20"
+    data-polish="Excellent"
+    data-symmetry="Excellent"
+    data-fluorescence="None"
+    data-certificate="GIA"
+    data-price="110000"
+>
+
+    <img
+        src="WhatsApp Image 2026-09-27 at 8.34.11 PM.jpeg"
+        alt="Marquise Diamond">
+
+    <div class="diamond-details">
+
+        <h3>
+            Marquise Diamond
+        </h3>
+
+        <p>
+            <strong>Shape:</strong> Marquise
+        </p>
+
+        <p>
+            <strong>Clarity:</strong> VVS1
+        </p>
+
+        <p>
+            <strong>Color:</strong> G
+        </p>
+
+        <p>
+            <strong>Cut:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Carat:</strong> 1.20
+        </p>
+
+        <p>
+            <strong>Polish:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Symmetry:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Fluorescence:</strong> None
+        </p>
+
+        <p>
+            <strong>Certificate:</strong> GIA
+        </p>
+
+        <p>
+            <strong>About:</strong>
+            An elongated diamond with curved sides and pointed ends.
+            Its shape can give a larger face-up appearance for its weight.
+        </p>
+
+        <div class="price">
+            ₹1,10,000
+        </div>
+
+        <details>
+
+            <summary>
+                Vendor Details ▼
+            </summary>
+
+            <div class="vendor-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    Royal Diamond Traders
+                </p>
+
+                <p>
+                    <strong>Contact:</strong>
+                    9867894561
+                </p>
+
+            </div>
+
+        </details>
+
+    </div>
+
+</div>
+<div
+    class="diamond-card"
+
+    data-clarity="VS1"
+    data-color="F"
+    data-cut="Excellent"
+    data-shape="Heart"
+    data-carat="1.10"
+    data-polish="Excellent"
+    data-symmetry="Excellent"
+    data-fluorescence="None"
+    data-certificate="GIA"
+    data-price="105000"
+>
+
+    <img
+        src="WhatsApp Image 2026-09-27 at 9.15.06 PM.jpeg"
+        alt="Heart Shape Diamond">
+
+    <div class="diamond-details">
+
+        <h3>
+            Heart Shape Diamond
+        </h3>
+
+        <p>
+            <strong>Shape:</strong> Heart
+        </p>
+
+        <p>
+            <strong>Clarity:</strong> VS1
+        </p>
+
+        <p>
+            <strong>Color:</strong> F
+        </p>
+
+        <p>
+            <strong>Cut:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Carat:</strong> 1.10
+        </p>
+
+        <p>
+            <strong>Polish:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Symmetry:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Fluorescence:</strong> None
+        </p>
+
+        <p>
+            <strong>Certificate:</strong> GIA
+        </p>
+
+        <p>
+            <strong>About:</strong>
+            A heart-shaped diamond with two rounded sides and a
+            pointed bottom, giving it a distinctive romantic appearance.
+        </p>
+
+        <div class="price">
+            ₹1,05,000
+        </div>
+
+        <details>
+
+            <summary>
+                Vendor Details ▼
+            </summary>
+
+            <div class="vendor-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    Diamond World
+                </p>
+
+                <p>
+                    <strong>Contact:</strong>
+                    9898989898
+                </p>
+
+            </div>
+
+        </details>
+
+    </div>
+
+</div>
+<div
+    class="diamond-card"
+
+    data-clarity="VVS2"
+    data-color="G"
+    data-cut="Excellent"
+    data-shape="Radiant"
+    data-carat="1.30"
+    data-polish="Excellent"
+    data-symmetry="Excellent"
+    data-fluorescence="None"
+    data-certificate="IGI"
+    data-price="125000"
+>
+
+    <img
+        src="WhatsApp Image 2026-09-27 at 9.18.39 PM.jpeg"
+        alt="Radiant Cut Diamond">
+
+    <div class="diamond-details">
+
+        <h3>
+            Radiant Cut Diamond
+        </h3>
+
+        <p>
+            <strong>Shape:</strong> Radiant
+        </p>
+
+        <p>
+            <strong>Clarity:</strong> VVS2
+        </p>
+
+        <p>
+            <strong>Color:</strong> G
+        </p>
+
+        <p>
+            <strong>Cut:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Carat:</strong> 1.30
+        </p>
+
+        <p>
+            <strong>Polish:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Symmetry:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Fluorescence:</strong> None
+        </p>
+
+        <p>
+            <strong>Certificate:</strong> IGI
+        </p>
+
+        <p>
+            <strong>About:</strong>
+            A radiant diamond combines a rectangular or square outline
+            with brilliant-style faceting for a bright appearance.
+        </p>
+
+        <div class="price">
+            ₹1,25,000
+        </div>
+
+        <details>
+
+            <summary>
+                Vendor Details ▼
+            </summary>
+
+            <div class="vendor-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    Royal Gems
+                </p>
+
+                <p>
+                    <strong>Contact:</strong>
+                    9825012345
+                </p>
+
+            </div>
+
+        </details>
+
+    </div>
+
+</div>
+<div
+    class="diamond-card"
+
+    data-clarity="VS1"
+    data-color="Pink"
+    data-cut="Excellent"
+    data-shape="Heart"
+    data-carat="1.00"
+    data-polish="Excellent"
+    data-symmetry="Excellent"
+    data-fluorescence="None"
+    data-certificate="GIA"
+    data-price="185000"
+>
+
+    <img
+        src="WhatsApp Image 2026-09-27 at 9.22.22 PM.jpeg"
+        alt="Pink Heart Diamond">
+
+    <div class="diamond-details">
+
+        <h3>
+            Pink Heart Diamond
+        </h3>
+
+        <p>
+            <strong>Shape:</strong> Heart
+        </p>
+
+        <p>
+            <strong>Color:</strong> Pink
+        </p>
+
+        <p>
+            <strong>Clarity:</strong> VS1
+        </p>
+
+        <p>
+            <strong>Cut:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Carat:</strong> 1.00
+        </p>
+
+        <p>
+            <strong>Polish:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Symmetry:</strong> Excellent
+        </p>
+
+        <p>
+            <strong>Fluorescence:</strong> None
+        </p>
+
+        <p>
+            <strong>Certificate:</strong> GIA
+        </p>
+
+        <p>
+            <strong>About:</strong>
+            A distinctive pink heart-shaped diamond with a romantic
+            appearance and brilliant sparkle.
+        </p>
+
+        <div class="price">
+            ₹1,85,000
+        </div>
+
+        <details>
+
+            <summary>
+                Vendor Details ▼
+            </summary>
+
+            <div class="vendor-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    Pink Diamond House
+                </p>
+
+                <p>
+                    <strong>Contact:</strong>
+                    9876543210
+                </p>
+
+            </div>
+
+        </details>
+
+    </div>
+
+</div>
+</div>
+
+</section>
+
+<div id="noResults" class="no-results" style="display: none;">
+
+    <h2>No Diamonds Found</h2>
+
+    <p>
+        We couldn't find a diamond matching your selected requirements.
+    </p>
+
+    <p>
+        You can place a request and we will help you find it.
+    </p>
+
+    <a href="request.html" class="request-btn">
+        Place Request
+    </a>
+
+</div>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+         Diamond Craft
+    </h2>
+
+    <p>
+        Explore. Compare. Discover.
+    </p>
+
+    <p>
+        © 2026 Diamond  Craft
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Place Diamond Request - Diamond Draft</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="request-page">
+
+        <h1>Place Diamond Request</h1>
+
+        <p>
+            Tell us what diamond you are looking for.
+        </p>
+
+        <form action="request.php" method="POST">
+
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Contact Number</label>
+            <input type="text" name="phone" required>
+
+            <label>Diamond Shape</label>
+
+            <select name="shape" required>
+
+                <option value="">Select Shape</option>
+                <option>Round</option>
+                <option>Princess</option>
+                <option>Oval</option>
+                <option>Emerald</option>
+                <option>Pear</option>
+                <option>Marquise</option>
+                <option>Cushion</option>
+                <option>Radiant</option>
+                <option>Heart</option>
+
+            </select>
+
+            <label>Clarity</label>
+
+            <select name="clarity" required>
+
+                <option value="">Select Clarity</option>
+                <option>FL</option>
+                <option>IF</option>
+                <option>VVS1</option>
+                <option>VVS2</option>
+                <option>VS1</option>
+                <option>VS2</option>
+                <option>SI1</option>
+                <option>SI2</option>
+
+            </select>
+
+            <label>Color</label>
+
+            <select name="color" required>
+
+                <option value="">Select Color</option>
+                <option>D</option>
+                <option>E</option>
+                <option>F</option>
+                <option>G</option>
+                <option>H</option>
+                <option>I</option>
+                <option>J</option>
+                <option>Pink</option>
+
+            </select>
+
+            <label>Carat</label>
+
+            <input
+                type="number"
+                name="carat"
+                step="0.01"
+                min="0"
+                required
+            >
+
+            <label>Additional Requirement</label>
+
+            <textarea
+                name="message"
+                rows="5"
+                placeholder="Enter any additional requirements..."
+            ></textarea>
+
+            <button type="submit">
+                Submit Request
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
